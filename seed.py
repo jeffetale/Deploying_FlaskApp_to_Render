@@ -12,9 +12,11 @@ with app.app_context():
     grackle = Bird(name='Grackle', species='Quiscalus Quiscula')
     starling = Bird(name='Common Starling', species='Sturnus Vulgaris')
     dove = Bird(name='Mourning Dove', species='Zenaida Macroura')
+    chicken = Bird(name='Steaky', species='Pecckis Steckis')
+    kiwi = Bird(name='Tangu Nyeusi', species='Black Birdies')
 
     print('Adding bird objects to transaction...')
-    db.session.add_all([chickadee, grackle, starling, dove])
+    db.session.add_all([chickadee, grackle, starling, dove, chicken, kiwi])
 
     print('Committing transaction...')
     db.session.commit()
